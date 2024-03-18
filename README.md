@@ -1,2 +1,2 @@
-# yksil-projekti_k24
+# yksilöprojekti_k24
 Repositorio web-sovelluskehitys kurssin yksilöprojektille
