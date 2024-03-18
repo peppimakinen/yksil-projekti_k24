@@ -1,0 +1,232 @@
+/* general styles */
+:root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 16px;
+    background-color: aliceblue;
+    background-image: url(bgimage.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* navigation styles */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #29333C;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: white;
+    border-radius: 10px;
+}
+
+li a:hover:not(.active) {
+    background-color: #5D7283;
+    border-radius: 10px;
+}
+
+.active {
+    background-color: black;
+}
+
+/* main page */
+h1 {
+    margin: 60px;
+    text-align: center;
+    font-size: 40px;
+    color: #29333C;
+}
+
+h2 {
+    margin: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: #29333C;
+}
+
+.pastEntries {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.pastEntries button {
+    cursor: pointer;
+    padding: 15px 28px;
+    border: 2px solid #29333C;
+    border-radius: 17px;
+    background-color: #29333C;
+    color: #f2f2f2;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.pastEntries button:focus {
+    outline: none;
+}
+
+.pastEntries button:hover {
+    background-color: #5D7283;
+    border: 2px solid #5D7283;
+}
+
+
+/* do you want to make an entry form styles */
+.yesorno {
+    text-align: center;
+    padding: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+}
+
+.button-group button {
+    cursor: pointer;
+    padding: 15px 28px;
+    border: 2px solid #29333C;
+    border-radius: 17px;
+    background-color: #29333C;
+    color: #f2f2f2;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.button-group button:focus {
+    outline: none;
+}
+
+.button-group button:hover {
+    background-color: #5D7283;
+    border: 2px solid #5D7283;
+}
+
+
+/* post entry popup styles */
+/* post entry popup styles */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#popup {
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #29333C;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.closePopup {
+    color: #f2f2f2;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.closePopup:hover {
+    color: #aaa;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 28px;
+    color: #f2f2f2;
+    font-weight: 300;
+}
+
+.entry_form {
+    background: #29333C;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+.entry_form label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.entry_form input[type="text"],
+.entry_form input[type="date"],
+.entry_form input[type="number"],
+.entry_form select,
+.entry_form textarea {
+    width: calc(100% - 12px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    outline: none;
+}
+
+.entry_form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5D7283;
+    color: #f2f2f2;
+    font-size: 17px;
+    font-weight: 100;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.entry_form input[type="submit"]:hover {
+    background-color: #83949E;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+
+  <body>
+
+  <!-- Overlay for the popup -->
+  <div id="overlay"></div>
+
+  <!-- Popup -->
+  <div id="popup">
+      <span class="closePopup" id="closePopup">&times;</span>
+      <h3 class="registerHeading">Create your account</h3>
+      <form class="register_form">
+          <label for="username">Username</label>
+          <input type="text" name="username" placeholder="username" id="username"/>
+          <label for="password">Password</label>
+          <input type="password" name="password" placeholder="password" id="password" />
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="email" id="email"/>
+          <label for="createAccount" class="hiddentext">'</label>
+          <input name="submit" type="submit" value="submit" class="createuser" id="createAccount"/>
+      </form>
+  </div>
+
+  <div class="login">
+      <form class="login_form">
+          <input type="text" name="username" placeholder="username" />
+          <input type="password" name="password" placeholder="password" />
+          <label for="loginbutton" class="hiddentext">'</label>
+          <input name="submit" type="submit" value="LOGIN" class="loginuser" id="loginbutton"/>
+          <p class="not_registered">Not registered? <a href="#" class="openPopup">Create an account</a></p>
+      </form>
+      <br />
+  </div>
+
+  
+  <div class="hidden">
+    <pre><code>
+      # Get user info by token (requires token)
+      GET http://localhost:3000/api/auth/me
+      Authorization: Bearer (put-user-token-here)</code></pre>
+    <button id="meRequest">Make an "authenticated" request</button>
+    <br />
+    <h5>USER INFO:</h5>
+    <div id="meResponse"></div>
+  </div>
+
+  <h3 class="hidden">Local Storage</h3>
+    <div class="hidden">
+      <button id="clearButton">Clear localStorage</button>
+      <br />
+      <code id="clearResponse"></code>
+    </div>
+
+    <script type="module" src="/login.js"></script>
+
+  </body>
+</html>

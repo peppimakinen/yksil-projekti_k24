@@ -1,0 +1,420 @@
+/* general styles */
+:root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 16px;
+    background-color: aliceblue;
+    background-image: url(bgimage.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* navigation styles */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #29333C;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: white;
+    border-radius: 10px;
+}
+
+li a:hover:not(.active) {
+    background-color: #5D7283;
+    border-radius: 10px;
+}
+
+.active {
+    background-color: black;
+}
+
+
+/* headings */
+h1 {
+    margin: 60px;
+    text-align: center;
+    font-size: 40px;
+    color: #29333C;
+}
+
+h2 {
+    margin: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: #29333C;
+}
+
+.user {
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #29333C;
+}
+
+
+/* entries table styling */
+.tableWrapper {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.entriesTable {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #83949E;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.entriesTable th,
+.entriesTable td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.entriesTable th {
+    background-color: #29333C;
+    color: #f2f2f2;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.entriesTable tr {
+    font-weight: 100;
+    font-size: 15px;
+    color: #050505;
+}
+
+.tableBody {
+    text-align: center;
+}
+
+.tableBody tr:nth-child(even) {
+    background-color: #dbe2e4;
+}
+
+.entriesTable th:nth-child(5),
+.entriesTable td:nth-child(5) {
+    max-width: 200px;
+    /* Adjust the maximum width as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* edit entries buttons */
+.editEntries {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 40px;
+    color: #29333C;
+    margin: 30px;
+}
+
+.editEntries h3 {
+    margin: 10px 30px;
+}
+
+.editEntries button {
+    cursor: pointer;
+    padding: 15px 28px;
+    border: 2px solid #29333C;
+    border-radius: 17px;
+    background-color: #29333C;
+    color: #f2f2f2;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.editEntries button:focus {
+    outline: none;
+}
+
+.editEntries button:hover {
+    background-color: #5D7283;
+    border: 2px solid #5D7283;
+}
+
+
+/* delete entry popup */
+#deleteOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#deletePopup {
+    position: fixed;
+    z-index: 1000;
+    height: 45%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #29333C;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.deleteForm {
+    background: #29333C;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+h4 {
+    margin: 40px;
+    text-align: center;
+    font-size: 22px;
+    color: #f2f2f2;
+    font-weight: 500;
+}
+
+.closeDelete {
+    color: #f2f2f2;
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.closeDelete:hover {
+    color: #aaa;
+}
+
+.deleteForm input[type="number"] {
+    width: 20%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    outline: none;
+}
+
+.deleteForm input[type="submit"] {
+    width: 50%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5D7283;
+    color: #f2f2f2;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.deleteForm input[type="submit"]:hover {
+    background-color: #83949E;
+}
+
+/* edit entry popup */
+#editOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#editPopup {
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #29333C;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.editForm {
+    background: #29333C;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+#editId {
+    width: 20%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    outline: none;
+}
+
+.closeEdit {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+    color: #f2f2f2;
+}
+
+.editForm input[type="text"],
+.editForm input[type="number"],
+.editForm select,
+.editForm textarea {
+    width: calc(100% - 12px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    outline: none;
+}
+
+.editForm input[type="submit"] {
+    width: 50%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5D7283;
+    color: #f2f2f2;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.editForm input[type="submit"]:hover {
+    background-color: #83949E;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #29333C;
+    color: #f2f2f2;
+    margin: 10% auto;
+    padding: 20px;
+    border: none;
+    width: 70%;
+    max-width: 500px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.modal input[type="text"],
+.modal input[type="date"],
+.modal input[type="number"],
+.modal select,
+.modal textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    outline: none;
+}
+
+.modal input[type="submit"] {
+    width: 30%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #5D7283;
+    color: #f2f2f2;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal input[type="submit"]:hover {
+    background-color: #83949E;
+}
+
+.closeEdit,
+.closeModal {
+    color: #f2f2f2;
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.closeEdit:hover,
+.closeModal:hover {
+    color: #aaa;
+}
