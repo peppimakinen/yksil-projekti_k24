@@ -6,7 +6,7 @@
 FE_Git submodule isn't functional but I can't delete it so ignore pls and thank you
 
 ### Link to video tour of the UI
-
+https://drive.google.com/drive/u/0/folders/1vugczGYERd_IsJWyUvbVdMYwISwLAx8h
 
 ### Screenshots of input options
 These did not show in the video for some reason <br>
