@@ -5,6 +5,14 @@
 
 FE_Git submodule isn't functional but I can't delete it so ignore pls and thank you
 
+### Video and screenshots of unseen input options
+
+
+![image](https://github.com/peppimakinen/yksiloprojekti_k24/assets/111729175/72529c69-1eba-4ac6-a3d5-f1fb03ada094)
+![image](https://github.com/peppimakinen/yksiloprojekti_k24/assets/111729175/2cc5f66d-1ba7-488d-8a4e-1b100febe3a6)
+
+
+
 ### Screenshots of UI
 #### Login
 Login:
