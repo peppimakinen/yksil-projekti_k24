@@ -55,8 +55,7 @@ Delete button: <br>
    - Opens a popup to input an entry ID for deletion, and upon submission, deletes the specified entry.
 
 ### Known bugs and problems 
-  The server doesn't work, certbot couldn't install certificate no matter what I tried
-  - The NutritionIntake database table isn't used
+  - The NutritionIntake database table isn't implemented at the moment
 
 ### References etc.
 #### Template used for login
